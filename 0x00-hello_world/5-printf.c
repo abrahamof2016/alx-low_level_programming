@@ -1,3 +1,7 @@
+/**
+  * main () - entry point
+  * return always 0
+  */
 #include <stdio.h>
 int main(void)
 {
