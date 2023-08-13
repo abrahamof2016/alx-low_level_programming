@@ -13,12 +13,12 @@ int main(void)
 		{
 			for (k = 0; k <= 9; k++)
 			{
-				if( i < j && j < k)
+				if (i < j && j < k)
 				{
 					putchar('0' + i);
 					putchar('0' + j);
 					putchar('0' + k);
-					if(i != 7)
+					if (i != 7)
 					{
 					putchar(44);
 					putchar(32);
