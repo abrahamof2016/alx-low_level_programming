@@ -5,7 +5,8 @@
   */
 int main(void)
 {
-	int i,j;
+	int i, j;
+
 	for (i = 0; i <= 8; i++)
 	{
 		for (j = 0; j <= 9; j++)
@@ -14,7 +15,7 @@ int main(void)
 			{
 				putchar('0' + i);
 				putchar('0' + j);
-				if (i != 8 && i !=9)
+				if (i != 8 && i != 9)
 				{
 					putchar(44);
 					putchar(32);
