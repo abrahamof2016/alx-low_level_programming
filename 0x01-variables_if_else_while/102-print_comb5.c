@@ -17,13 +17,16 @@ int main(void)
 				{
 					if (i <= k && (j < l || j == 0 || l == 0 || l == 1))
 					{
-					putchar('0' + i);
-					putchar('0' + j);
-					putchar(32);
-					putchar('0' + k);
-					putchar('0' + l);
-					putchar(44);
-					putchar(32);
+						if ( i != 0 && j != 0 && k != 0)
+						{
+							putchar('0' + i);
+							putchar('0' + j);
+							putchar(32);
+							putchar('0' + k);
+							putchar('0' + l);
+							putchar(44);
+							putchar(32);
+						}
 					}
 				}
 			}
