@@ -15,9 +15,12 @@ int main(void)
 			{
 				for (l = 0; l <= 9; l++)
 				{
-					if (i <= k && (j < l || j == 0 || l == 0 || l == 1))
+					if ((i <= k) && (j < 1 || j == 0 || l == 0 || l == 1))
 					{
-						if ( i != 0 && j != 0 && k != 0)
+						if ((i == 0) && (j == 0) && (k == 0) && (l == 0))
+						{
+						}
+						else
 						{
 							putchar('0' + i);
 							putchar('0' + j);
@@ -32,7 +35,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
-
