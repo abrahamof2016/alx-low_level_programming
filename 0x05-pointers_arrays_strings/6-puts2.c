@@ -11,9 +11,12 @@ void puts2(char *str)
 
 	l = strlen(str);
 
-	for (i = 0; i <= (l - 2); i = i + 2)
+	for (i = 0; i <= l; i = i + 2)
 	{
+		if (str[i] != 32)
+		{
 		_putchar(str[i]);
+		}
 	}
 	_putchar(10);
 }
