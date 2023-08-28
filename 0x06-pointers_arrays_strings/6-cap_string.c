@@ -14,9 +14,10 @@ char *cap_string(char *a)
 	l = strlen(a);
 	for (i = 0; i < (l - 1); i++)
 	{
-		if ((a[i] == 32) || (a[i] == '\n') || (a[i] == '\t'))
+		if (((a[i] >= 9) && (a[i] <= 63)) || (a[i] == 123) || (a[i] == 12))
 		{
-			a[i + 1] = toupper(a[i + 1]);
+			if (a[i] != 54)
+				a[i + 1] = toupper(a[i + 1]);
 		}
 		else
 		{
