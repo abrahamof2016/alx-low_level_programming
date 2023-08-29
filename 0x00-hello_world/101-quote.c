@@ -8,7 +8,7 @@ int main(void)
 {
 	char *b;
 
-	b = "and that piece of art is usefull\" - Dora Korpar, 2015-10-19\n";
+	b = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	fputs(b, stdout);
 	return (1);
 }
