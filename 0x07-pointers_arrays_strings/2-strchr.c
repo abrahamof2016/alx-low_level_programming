@@ -19,6 +19,11 @@ char *_strchr(char *s, char c)
 			s = &s[i];
 			break;
 		}
+		if (s[i] == 0)
+		{
+			return (NULL);
+			break;
+		}
 		i++;
 	}
 	return (s);
