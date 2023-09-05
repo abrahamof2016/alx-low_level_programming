@@ -12,13 +12,15 @@ unsigned int _strspn(char *s, char *accept)
 
 	counter = 0;
 	len2 = strlen(accept);
-	for (i = 0; s[i] != ','; i++)
+	i = 0;
+	while (s[i] != 32)
 	{
 		for (j = 0; j < len2; j++)
 		{
 			if (s[i] == accept[j])
 				counter += 1;
 		}
+		i++;
 	}
 	return (counter);
 }
