@@ -5,26 +5,27 @@
   * @argc: counts an argument.
   * @argv: an array of pointer to string.
   * Return: 0 on success.
-  * Return: 1 on error.
+  * : 1 on error.
   */
 int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 
-	for (i = 1; i < argc; i++)
+	if (argc > 2)
 	{
-		if ((*argv[i]) >= 48 && (*argv[i]) <= 57)
+		for (i = 1; i < argc; i++)
 		{
-			sum += atoi(argv[i]);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
+			if ((*argv[i]) >= 48 && (*argv[i]) <= 57)
+			{
+				sum += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
 	printf("%d\n", sum);
 	return (0);
 }
-
-
