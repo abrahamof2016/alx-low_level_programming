@@ -5,6 +5,7 @@
   * @argc: counts an argument.
   * @argv: an array of pointer to string.
   * Return: 0 on success.
+  * Return: 1 on error.
   */
 int main(int argc, char *argv[])
 {
