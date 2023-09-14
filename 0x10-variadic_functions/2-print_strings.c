@@ -17,7 +17,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		char *x = va_arg(args, char *);
 
-		if ((x == NULL) || (*x == '\0'))
+		if ((*x == '\0'))
 		{
 			printf("%p", x);
 		}
