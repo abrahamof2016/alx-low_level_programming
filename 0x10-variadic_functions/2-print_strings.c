@@ -19,10 +19,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if ((x == NULL) || (*x == '\0'))
 		{
-			printf("%p\n", x);
-			return;
+			printf("%p", x);
 		}
-		printf("%s", x);
+		else
+			printf("%s", x);
 		if (separator != NULL)
 		{
 			if (i != (n - 1))
