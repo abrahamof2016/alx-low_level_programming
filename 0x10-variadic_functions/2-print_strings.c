@@ -20,6 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if ((x == NULL) || (*x == '\0'))
 		{
 			printf("%p\n", x);
+			return;
 		}
 		printf("%s", x);
 		if (separator != NULL)
