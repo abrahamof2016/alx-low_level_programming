@@ -4,7 +4,7 @@
 /**
   * print_strings - prints a string.
   * @separator: string separator.
-  * @n: number of a strings.
+  * @n: number of a strings passed to a function.
   * Return: nothing.
   */
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -17,18 +17,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		char *x = va_arg(args, char *);
 
-		if ((*x == '\0'))
-		{
-			printf("%p", x);
-		}
-		else
+		if (*x)
 			printf("%s", x);
-		if (separator != NULL)
-		{
-			if (i != (n - 1))
+		else
+			printf("(nil)");
+		if (i < n - 1)
+			if (separator)
 				printf("%s", separator);
-		}
 	}
 	printf("\n");
+	va_end(args);
 }
 
