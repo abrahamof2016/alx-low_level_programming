@@ -1,5 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
+#include <string.h>
 /**
   * struct lits_s - singly linked list.
   * @str: string - (malloc'ed string)
