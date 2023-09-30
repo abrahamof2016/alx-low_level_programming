@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string.h>
-#include <math.h>
 /**
   * binary_to_uint - converts unsigned int to binary number.
   * @b: the binary to be converted.
@@ -20,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		if (b[i] == '1')
 		{
-			squa = pow(2, j++);
+			squa = _pow(2, j++);
 			sum = sum + squa;
 		}
 		if (b[i] == '0')
@@ -28,3 +27,20 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (sum);
 }
+/**
+  * _pow - computes the power of a number.
+  * @base: a base..
+  * @exponent: an exponent.
+  * Return: an integer.
+  */
+int _pow(int base, int exponent)
+{
+	int i, mul = 1;
+
+	for (i = 0; i < exponent; i++)
+	{
+		mul = mul * base;
+	}
+	return (mul);
+}
+
