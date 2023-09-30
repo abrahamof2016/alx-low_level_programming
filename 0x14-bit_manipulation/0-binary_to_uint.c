@@ -15,14 +15,14 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (i = (strlength - 1); i >= 0; i--)
 	{
-		if (b[i] != 48 && b[i] != 49)
+		if (b[i] < 48 && b[i] > 49)
 			return (0);
-		if (b[i] == '1')
+		if (b[i] == 49)
 		{
 			squa = _pow(2, j++);
 			sum = sum + squa;
 		}
-		if (b[i] == '0')
+		if (b[i] == 48)
 			j++;
 	}
 	return (sum);
