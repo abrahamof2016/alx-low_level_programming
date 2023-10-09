@@ -11,23 +11,20 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int bytes_read, fd;
+	int fd;
 	char *buffer = malloc(letters * sizeof(char));
+	ssize_t bytes_read, bytes_written;
 
 	if (!filename)
 		return (0);
 	fd = open(filename, O_RDWR);
 	if (fd == -1)
-	{
 		return (0);
-	}
 	bytes_read = read(fd, buffer, letters);
 	if (bytes_read == -1)
-	{
 		return (0);
-	}
-	write(1, buffer, bytes_read);
+	bytes_written = write(1, buffer, bytes_read);
 	close(fd);
 	free(buffer);
-	return (bytes_read);
+	return (bytes_written);
 }
