@@ -21,14 +21,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	bytes_read = read(fd, buffer, letters);
+	read(fd, buffer, letters);
 	if (bytes_read == -1)
 	{
 		return (0);
 	}
-	write(1, buffer, bytes_read);
+	bytes_read = write(1, buffer, bytes_read);
 	close(fd);
 	free(buffer);
 	return (bytes_read);
 }
-
