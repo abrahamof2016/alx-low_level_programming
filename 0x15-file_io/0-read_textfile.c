@@ -5,23 +5,32 @@
   * @filename: a text file to be read.
   * @letters: number of characters to be read and printed.
   * Return: number of characters printed upon success.
-  * 0 upon fialure.
+  * 0 if filename is NULL.
+  * 0 if write failes or does not return expected number of bytes.
+  * 0 if file name cannot be opened or read.
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, sz;
+	size_t i;
+	int bytes_read, fd;
 	char *buffer = malloc(letters * sizeof(char));
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
 	fd = open(filename, O_RDWR);
 	if (fd < 0)
 	{
 		return (0);
 	}
-	sz = read(fd, buffer, letters);
-	_putchar(sz);
-	printf("%s", buffer);
-	return (sz);
+	bytes_read = read(fd, buffer, letters);
+	for (i = 0; i < strlen(buffer); i++)
+	{
+		_putchar(buffer[i]);
+	}
+
+	_putchar(bytes_read);
+	close(fd);
+	free(buffer);
+	return (bytes_read);
 }
 
