@@ -10,9 +10,9 @@ char *_strdup(char *str)
 	int len;
 	char *newspace;
 
-	len = strlen(str) + 1;
 	if (str == NULL)
 		return (NULL);
+	len = strlen(str) + 1;
 	newspace = malloc(sizeof(char) * len);
 	if (newspace == NULL)
 		return (NULL);
